@@ -1,0 +1,203 @@
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents
+$ git init mina
+Initialized empty Git repository in C:/Users/ramakrishnas.SAVENTECH/Documents/mina/.git/
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents
+$ cd mina/
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ ls
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ ls -a
+./  ../  .git/
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ cd .git/
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina/.git (GIT_DIR!)
+$ ls
+config  description  HEAD  hooks/  info/  objects/  refs/
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina/.git (GIT_DIR!)
+$ cat config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina/.git (GIT_DIR!)
+$ cd ..
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ ls
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ ls -ls
+total 0
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ ls -a
+./  ../  .git/
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ echo "My first Commit" > file1.txt
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git add file1.txt
+warning: LF will be replaced by CRLF in file1.txt.
+The file will have its original line endings in your working directory.
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   file1.txt
+
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git rm --cached file1.txt
+rm 'file1.txt'
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git add file1.txt
+warning: LF will be replaced by CRLF in file1.txt.
+The file will have its original line endings in your working directory.
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   file1.txt
+
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git commit -m "My First commit to git local repo"
+[master (root-commit) 25579c8] My First commit to git local repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git logs
+git: 'logs' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git log
+commit 25579c84254a6cde75413ac0ba19a46973b1b4f3 (HEAD -> master)
+Author: Rama Krishna S <ramakrishna.srighakollapu@saven.in>
+Date:   Wed Mar 6 17:29:45 2019 +0530
+
+    My First commit to git local repo
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git checkout -- file1.txt
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git add file1.txt
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file1.txt
+
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git commit -m "My Second commit to git local repo"
+[master 911c9fd] My Second commit to git local repo
+ 1 file changed, 1 insertion(+)
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
+$ git log
+commit 911c9fdb001cec54da55f821f421458c58f6af44 (HEAD -> master)
+Author: Rama Krishna S <ramakrishna.srighakollapu@saven.in>
+Date:   Wed Mar 6 17:33:35 2019 +0530
+
+    My Second commit to git local repo
+
+commit 25579c84254a6cde75413ac0ba19a46973b1b4f3
+Author: Rama Krishna S <ramakrishna.srighakollapu@saven.in>
+Date:   Wed Mar 6 17:29:45 2019 +0530
+
+    My First commit to git local repo
+
+ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
