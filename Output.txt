@@ -205,3 +205,4 @@ ramakrishnas@DESK098-SRAMAK MINGW64 ~/Documents/mina (master)
 
 
 Test stash in output.txt
+test Stash pop
