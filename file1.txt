@@ -1,1 +1,2 @@
 Test1 merge test for real merges
+test2 merge test for real merges
