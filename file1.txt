@@ -1,6 +1,12 @@
 
+
 Test1 merge test for real merges
 test2 merge test for real merges
 
 merge test 
 merge test1 
+
+first Commit
+My Second Commit
+test for real merge 
+
