@@ -1,1 +1,2 @@
-Paste links here
+https://learning.oreilly.com/live-training/courses/terraform-getting-started/0636920462460/
+
